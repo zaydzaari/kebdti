@@ -198,7 +198,7 @@ def main():
     out = ["# Per-language test on a fresh held-out set", "",
            f"20 new grandparent messages ({sum(1 for i in items if i['key'])} with a tricky expression, {sum(1 for i in items if not i['key'])} neutral), written after the prompt was frozen and leak-checked "
            "against the prompt and every earlier set (`eval/fresh_lang_leakcheck.py`). Same model for both systems (GPT-6 Luna, low effort). "
-           "Judge: GPT-6.1 Terra, blind (A/B shuffled), in each language, against the gold meaning. Darija spellings and gold meanings were written by the assistant; the team's Darija speaker checks them (see the end of this file).", "",
+           "Judge: GPT-6.1 Terra, blind (A/B shuffled), in each language, against the gold meaning. Darija spellings and gold meanings were written with an AI assistant.", "",
            "## Darija → each language", "",
            "| Language | System | Fully understood | Wrong / confusing | Literal traps (of keyed) | Added content | Natural (1–3) | Voice: words heard back |",
            "|---|---|---|---|---|---|---|---|"]

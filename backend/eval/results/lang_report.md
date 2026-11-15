@@ -1,6 +1,6 @@
 # Per-language test on a fresh held-out set
 
-20 new grandparent messages (17 with a tricky expression, 3 neutral), written after the prompt was frozen and leak-checked against the prompt and every earlier set (`eval/fresh_lang_leakcheck.py`). Same model for both systems (GPT-6 Luna, low effort). Judge: GPT-6.1 Terra, blind (A/B shuffled), in each language, against the gold meaning. Darija spellings and gold meanings were written by the assistant; the team's Darija speaker checks them (see the end of this file).
+20 new grandparent messages (17 with a tricky expression, 3 neutral), written after the prompt was frozen and leak-checked against the prompt and every earlier set (`eval/fresh_lang_leakcheck.py`). Same model for both systems (GPT-6 Luna, low effort). Judge: GPT-6.1 Terra, blind (A/B shuffled), in each language, against the gold meaning. Darija spellings and gold meanings were written with an AI assistant.
 
 ## Darija → each language
 
