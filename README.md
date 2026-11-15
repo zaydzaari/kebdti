@@ -126,7 +126,7 @@ The Darija voice (her clone speaking Darija) was harder: 62% of words heard back
 
 **Where it fails, and why we think so:**
 - **"إمتى نفرح بيك"** came out as "When will you make me happy?" instead of "When will I see you married?". The model doesn't know this idiom.
-- **"حتى زين ما خطاتو لولا"** (nobody is perfect) failed in all 4 languages. In Italian the model even read "لولا" as a name, "Lola".
+- **"حتى زين ما خطاتو لولا"** (nobody is perfect) was missed in 6 of the 7 languages (only the German version got it). In Italian the model even read "لولا" as a name, "Lola".
 - **"وجهك ولا صفر"** (you look pale) still came out as "yellow face" in French and Italian, and the regional word **"فازگ"** (wet hair) became "head uncovered".
 - **Rare proverbs keep their image** ("one hand can't clap"), with the meaning only in the note. Once, for an unknown proverb, the model **invented** a confident wrong one ("Who dares, wins"). We added a rule: never invent; say "Kebdti isn't sure, ask what she meant".
 - **Darija voices are harder than European ones:** Darija has no standard spelling and few training voices. That is why every Darija voice note is listened back.
