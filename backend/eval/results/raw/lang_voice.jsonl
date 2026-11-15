@@ -78,3 +78,63 @@
 {"id": "f20:fr", "said": "Ne cours pas sans cesse après les choses de la vie ; la santé, c’est le vrai trésor, ma fille.", "heard": "Ne cours pas sans cesse après les choses de la vie, la santé c'est le vrai trésor ma fille.", "kept": 0.923}
 {"id": "f20:es", "said": "No sigas corriendo detrás de las cosas de este mundo; la salud es el mayor tesoro, hija mía.", "heard": "No sigas corriendo detrás de las cosas de este mundo, la salud es el mayor tesoro, Jania.", "kept": 0.914}
 {"id": "f20:it", "said": "Non continuare a correre dietro alle cose del mondo: la salute è il vero tesoro, figlia mia.", "heard": "Non continuare a correre dietro alle cose del mondo, la salute è il vero tesoro, figlia mia", "kept": 1.0}
+{"id": "f01:nl", "said": "Mijn lieverd, het is dit jaar erg koud. Kleed je goed aan en ga niet naar buiten met nat haar.", "heard": "Hé lieverd, het is dit jaar erg koud. Kleed je goed aan en ga niet naar buiten met nat haar.", "kept": 0.95}
+{"id": "f01:de", "said": "Mein Schatz, dieses Jahr ist die Kälte besonders streng. Zieh dich warm an und geh nicht mit nassen Haaren nach draußen.", "heard": "Mein Schatz, dieses Jahr ist die Kälte besonders streng. Zieh dich warm an und geh nicht mit nassen Haaren nach draußen.", "kept": 1.0}
+{"id": "f01:ar", "said": "يا قلبي، إن البرد هذا العام شديد، فارتدِ ملابس دافئة ولا تخرج وشعرك مبلل.", "heard": "يا قلبي إن البرد هذا العام شديد، فارتدي ملابس دافئة ولا تخرجي وشعرك مبلل.", "kept": 0.857}
+{"id": "f02:nl", "said": "Het lekkers dat je me hebt gestuurd, mijn meisje, ik zweer het, ik heb zelfs mijn vinger afgelikt.", "heard": "het lekkerste dat je me hebt gestuurd mijn meisje. Ik zweer het. Ik heb zelfs mijn vingers afgelikt.", "kept": 0.889}
+{"id": "f02:de", "said": "Die Süßigkeit, die du mir geschickt hast, meine Tochter – ich schwöre, ich habe sie sogar mit dem Finger abgeleckt.", "heard": "Die Süßigkeit, die du mir geschickt hast, meine Tochter, ich schwöre, ich habe sie sogar mit dem Finger abgeleckt.", "kept": 1.0}
+{"id": "f02:ar", "said": "الحلوى التي أرسلتِها إليّ يا ابنتي، والله لقد لعقتها حتى بإصبعي.", "heard": "الحلوى التي أرسلتها إلي يا ابنتي، والله لقد لعقتها حتى بأصبعي.", "kept": 0.909}
+{"id": "f03:nl", "said": "Maak je niet langer zorgen over het examen; wat God heeft beschikt, zal gebeuren.", "heard": "Maak je niet langer zorgen over het examen. Wat God heeft beschikt zal gebeuren.", "kept": 1.0}
+{"id": "f03:de", "said": "Mach dir wegen der Prüfung keine Sorgen mehr; es kommt, wie es kommen soll.", "heard": "Ja mach dir wegen der Prüfung keine Sorgen mehr. Es kommt wie es kommen soll", "kept": 0.966}
+{"id": "f03:ar", "said": "لا تقلق بشأن الامتحان؛ فما كتبه الله هو ما سيحدث.", "heard": "لا تقلق بشأن الامتحان فما كتبه الله هو ما سيحدث", "kept": 1.0}
+{"id": "f04:nl", "said": "Ga maar, mijn jongen. Moge God het je gemakkelijk maken en deuren voor je openen.", "heard": "Ga maar mijn jongen, moge God het je gemakkelijk maken en deuren voor je openen.", "kept": 1.0}
+{"id": "f04:de", "said": "Geh, mein Junge. Ich hoffe, dass alles gut für dich läuft und sich für dich eine Tür öffnet.", "heard": "Geh mein Junge. Ich hoffe, dass alles gut für dich läuft und sich für dich eine Tür öffnet", "kept": 1.0}
+{"id": "f04:ar", "said": "اذهب يا بني، ييسّر الله أمرك ويفتح لك الباب.", "heard": "اذهب يا بني ييسر الله أمرك ويفتح لك الباب", "kept": 1.0}
+{"id": "f05:nl", "said": "Je belt niet meer; we zijn zelfs de buren naar je gaan vragen.", "heard": "Je belt niet meer. We zijn zelfs de buren naar je gaan vragen.", "kept": 1.0}
+{"id": "f05:de", "said": "Du meldest dich gar nicht mehr – wir haben schon die Nachbarn nach dir gefragt.", "heard": "Äh du meldest dich gar nicht mehr, wir haben schon die Nachbarn nach dir gefragt.", "kept": 0.966}
+{"id": "f05:ar", "said": "لم تعد تتصل بنا، حتى إننا بدأنا نسأل الجيران عنك.", "heard": "الم تتصل بنا حتى اننا بدأنا نسأل الجيران عنك", "kept": 0.737}
+{"id": "f06:nl", "said": "Ons huis wacht op je, en de olijven van dit jaar zien er heerlijk uit.", "heard": "Ons huis wacht op je en de olijven van dit jaar zien er heerlijk uit.", "kept": 1.0}
+{"id": "f06:de", "said": "Unser Zuhause wartet auf dich, und die Oliven von diesem Jahr sehen köstlich aus.", "heard": "Unser Zuhause wartet auf dich und die Oliven von diesem Jahr sehen köstlich aus", "kept": 1.0}
+{"id": "f06:ar", "said": "بيتنا ينتظرك، وزيتون هذا العام يفتح الشهية.", "heard": "بيتنا ينتظركن وزيتون هذا العام يفتح الشهية", "kept": 0.857}
+{"id": "f07:nl", "said": "Mijn lieverd, ik heb in de zomer niet genoeg van je kunnen genieten. Kom deze keer vroeg terug.", "heard": "Mijn lieverd, ik heb in de zomer niet genoeg van je kunnen genieten. Kom deze keer vroeg terug", "kept": 1.0}
+{"id": "f07:de", "said": "Meine Augen konnten im Sommer nicht genug von dir bekommen. Komm dieses Mal früh zurück.", "heard": "Meine Augen konnten im Sommer nicht genug von dir bekommen, komm dieses Mal früh zurück.", "kept": 1.0}
+{"id": "f07:ar", "said": "لم أكتفِ برؤيتك هذا الصيف. عُد مبكرًا هذه المرة.", "heard": "لم أكتفي برؤيتك هذا الصيف عد مبكرا هذه المرة", "kept": 0.889}
+{"id": "f08:nl", "said": "Hij is groot geworden en een echte man geworden. Moge God hem beschermen tegen het boze oog.", "heard": "Hij is groot geworden en een echte man geworden. Moge God hem beschermen tegen het boze oog", "kept": 1.0}
+{"id": "f08:de", "said": "Er ist groß geworden und ein Mann geworden. Möge Gott ihn vor dem bösen Blick bewahren.", "heard": "Er ist groß geworden und ein Mann geworden. Möge Gott ihn vor dem bösen Blick bewahren.", "kept": 1.0}
+{"id": "f08:ar", "said": "كبر وأصبح رجلاً، حفظه الله من العين.", "heard": "كبر وأصبح رجلا حفظه الله من العين", "kept": 1.0}
+{"id": "f09:nl", "said": "Je tante is een beetje ziek. Bel haar en vrolijk haar op door met haar te praten.", "heard": "Je tante is een beetje ziek. Bel haar en vrolijk haar op door met haar te praten", "kept": 1.0}
+{"id": "f09:de", "said": "Deiner Tante geht es nicht so gut. Ruf sie an und muntere sie auf, indem du für sie da bist.", "heard": "Deiner Tante geht es nicht so gut. Ruf sie an und muntere sie auf, indem du für sie da bist.", "kept": 1.0}
+{"id": "f09:ar", "said": "خالتك مريضة قليلًا، فاتصل بها وأفرحها بصوتك.", "heard": "خالتك مريضة قليلا فاتصل بها وأفرحها بصوتك", "kept": 1.0}
+{"id": "f10:nl", "said": "Doe goed zonder iets terug te verwachten.", "heard": "doe goed zonder iets terug te verwachten", "kept": 1.0}
+{"id": "f10:de", "said": "Tu Gutes und erwarte keine Gegenleistung.", "heard": "Tu Gutes und erwarte keine Gegenleistung.", "kept": 1.0}
+{"id": "f10:ar", "said": "افعل الخير وألقِ به في البحر، ولا تنتظر شيئًا من أحد.", "heard": "افعل الخير والق به في البحر ولا تنتظر شيئا من احد", "kept": 0.818}
+{"id": "f11:nl", "said": "Ik zeg altijd tegen hen: die jongen is zo koppig als zijn opa.", "heard": "Ik zeg altijd tegen hen, hè? Die jongen is zo koppig als zijn opa.", "kept": 0.963}
+{"id": "f11:de", "said": "Ich sage ihnen immer: Dieser Junge ist genauso stur wie sein Großvater.", "heard": "Ich sage Ihnen immer, dieser Junge ist genauso stur wie sein Großvater", "kept": 1.0}
+{"id": "f11:ar", "said": "أقول لهم دائمًا: هذا الولد عنيد مثل جده.", "heard": "أقول لهم دائما: هذا الولد عنيد مثل جده.", "kept": 1.0}
+{"id": "f12:nl", "said": "Alles is hier rustig, alleen wil het maar niet regenen.", "heard": "Alles is hier rustig alleen wil het maar niet regenen.", "kept": 1.0}
+{"id": "f12:de", "said": "Hier ist alles ruhig, nur hat es nicht geregnet.", "heard": "Hier ist alles ruhig. Nur hat es nicht geregnet.", "kept": 1.0}
+{"id": "f12:ar", "said": "الأمور هادئة هنا، لكن المطر لم يهطل.", "heard": "الأمور هادئة هنا لكن المطر لم يهطل", "kept": 1.0}
+{"id": "f13:nl", "said": "Stuur me de foto's van de bruiloft. Ik wil zien wie er was.", "heard": "Stuur me de foto's van de bruiloft. Ik wil zien wie er was.", "kept": 1.0}
+{"id": "f13:de", "said": "Schick mir die Hochzeitsfotos, ich möchte sehen, wer da war.", "heard": "Schick mir die Hochzeitsfotos, ich möchte sehen, wer da war", "kept": 1.0}
+{"id": "f13:ar", "said": "أرسل لي صور العرس، أريد أن أرى من حضر.", "heard": "أرسل لي صور العرس أريد أن أرى من حضر", "kept": 1.0}
+{"id": "f14:nl", "said": "Zeg tegen je moeder dat ze mijn medicijnen meeneemt van de apotheek.", "heard": "Zeg tegen je moeder dat ze mijn medicijnen meeneemt van de apotheek.", "kept": 1.0}
+{"id": "f14:de", "said": "Sag deiner Mutter, sie soll meine Medizin aus der Apotheke mitbringen.", "heard": "Sag deiner Mutter, sie soll meine Medizin aus der Apotheke mitbringen.", "kept": 1.0}
+{"id": "f14:ar", "said": "قل لوالدتك أن تحضر معها دوائي من الصيدلية.", "heard": "قل لوالدتك أن تحضر معها دوائي من الصيدلية", "kept": 1.0}
+{"id": "f15:nl", "said": "Moge God je brengen naar wat je zo graag wilt, mijn jongen, en moge ik je kinderen nog zien voordat ik sterf.", "heard": "Moge God je brengen naar wat je zo graag wilt, mijn jongen, en moge ik je kinderen nog zien voordat ik sterf.", "kept": 1.0}
+{"id": "f15:de", "said": "Möge Gott dir das ermöglichen, was du dir wünschst, mein Sohn, und möge ich deine Kinder noch sehen, bevor ich sterbe.", "heard": "Möge Gott dir das ermöglichen, was du dir wünschst, mein Sohn, und möge ich deine Kinder noch sehen, bevor ich sterbe.", "kept": 1.0}
+{"id": "f15:ar", "said": "أسأل الله أن يوصلك إلى ما تتمناه يا بني، وأن أرى أبناءك قبل أن أموت.", "heard": "أسأل الله أن يوصلك إلى ما تتمناه يا بني، وأن أرى أبناءك قبل أن أموت", "kept": 1.0}
+{"id": "f16:nl", "said": "Eet je nog steeds alleen maar straateten? Op de foto ziet je gezicht er helemaal geel uit.", "heard": "Eet je nog steeds alleen maar straateten? Op de foto ziet je gezicht er helemaal geel uit.", "kept": 1.0}
+{"id": "f16:de", "said": "Isst du immer noch nur Streetfood? Auf dem Foto sieht dein Gesicht ganz gelb aus.", "heard": "Isst du immer noch nur Streetfood? Auf dem Foto sieht dein Gesicht ganz gelb aus.", "kept": 1.0}
+{"id": "f16:ar", "said": "هل ما زلت تأكل طعام الشارع فقط؟ يبدو وجهك أصفر في الصورة.", "heard": "هل ما زلت تأكل طعام الشارع فقط؟ يبدو وجهك أصفر في الصورة", "kept": 1.0}
+{"id": "f17:nl", "said": "Zelfs schoonheid is jou niet voorbijgegaan; je bent mooi en verstandig.", "heard": "Zelfs schoonheid is jou niet voorbijgegaan. Je bent mooi en verstandig.", "kept": 1.0}
+{"id": "f17:de", "said": "Selbst die Schönste ist nicht ohne Makel, und du bist schön und vernünftig.", "heard": "Selbst die Schönste ist nicht ohne Makel und du bist schön und vernünftig", "kept": 1.0}
+{"id": "f17:ar", "said": "حتى الجمال لم يخطئ لولا، وأنتِ جميلة وعاقلة.", "heard": "حتى الجمال لم يخطئ لولاه وأنتِ جميلة وعاقلة", "kept": 0.875}
+{"id": "f18:nl", "said": "Gisteren overviel het verlangen naar jou me. Ik bleef naar mijn telefoon kijken tot ik in slaap viel.", "heard": "Gisteren overviel het verlangen naar jou me. Ik bleef naar mijn telefoon kijken tot ik in slaap viel.", "kept": 1.0}
+{"id": "f18:de", "said": "Gestern hat mich die Sehnsucht nach dir überkommen. Ich habe immer wieder aufs Handy geschaut, bis ich eingeschlafen bin.", "heard": "Gestern hat mich die Sehnsucht nach dir überkommen. Ich habe immer wieder aufs Handy geschaut, bis ich eingeschlafen bin.", "kept": 1.0}
+{"id": "f18:ar", "said": "غمرني الشوق إليك بالأمس، وظللت أنظر إلى الهاتف حتى غلبني النعاس.", "heard": "غمرني الشوق إليك بالأمس، وظللت أنظر إلى الهاتف حتى غلبني النعاس.", "kept": 1.0}
+{"id": "f19:nl", "said": "Jij en je broer zijn onafscheidelijk. Laat niets tussen jullie komen.", "heard": "Jij en je broer zijn onafscheidelijk. Laat niets tussen jullie komen.", "kept": 1.0}
+{"id": "f19:de", "said": "Du und dein Bruder seid unzertrennlich – lasst nichts zwischen euch kommen.", "heard": "Du und dein Bruder seid unzertrennlich. Lasst nichts zwischen euch kommen.", "kept": 1.0}
+{"id": "f19:ar", "said": "أنت وأخوك كأنكما الظفر واللحم، فلا تدعا أيَّ شيء يفرّق بينكما.", "heard": "أنت وأخوك كأنكما الظفر واللحم فلا تدعا أي شيء يفرق بينكما", "kept": 1.0}
+{"id": "f20:nl", "said": "Blijf niet steeds achter alles aanrennen; je gezondheid is je grootste schat, mijn meisje.", "heard": "Blijf niet steeds achter alles aanrennen, je gezondheid is je grootste schat, mijn meisje.", "kept": 1.0}
+{"id": "f20:de", "said": "Hör auf, der Welt hinterherzurennen – die Gesundheit ist der größte Schatz, meine Tochter.", "heard": "Hör auf, der Welt hinterherzurennen. Die Gesundheit ist der größte Schatz, meine Tochter.", "kept": 1.0}
+{"id": "f20:ar", "said": "لا تظلي تركضين وراء الدنيا، فالصحة هي الكنز يا ابنتي.", "heard": "لا تظلي تركضين وراء الدنيا فالصحة هي الكنز يا ابنتي", "kept": 1.0}

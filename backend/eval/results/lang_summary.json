@@ -78,5 +78,65 @@
   "added": 1,
   "natural": 2.8,
   "voice": "99% (20 notes)"
+ },
+ "nl:baseline": {
+  "full": 13,
+  "n": 20,
+  "wrong": 1,
+  "lit": 6,
+  "keyed": 17,
+  "added": 0,
+  "natural": 2.5,
+  "voice": ""
+ },
+ "nl:kebdti": {
+  "full": 18,
+  "n": 20,
+  "wrong": 1,
+  "lit": 2,
+  "keyed": 17,
+  "added": 1,
+  "natural": 2.75,
+  "voice": "99% (20 notes)"
+ },
+ "de:baseline": {
+  "full": 14,
+  "n": 20,
+  "wrong": 1,
+  "lit": 6,
+  "keyed": 17,
+  "added": 0,
+  "natural": 2.35,
+  "voice": ""
+ },
+ "de:kebdti": {
+  "full": 15,
+  "n": 20,
+  "wrong": 0,
+  "lit": 3,
+  "keyed": 17,
+  "added": 0,
+  "natural": 2.85,
+  "voice": "100% (20 notes)"
+ },
+ "ar:baseline": {
+  "full": 16,
+  "n": 20,
+  "wrong": 0,
+  "lit": 4,
+  "keyed": 17,
+  "added": 0,
+  "natural": 2.65,
+  "voice": ""
+ },
+ "ar:kebdti": {
+  "full": 15,
+  "n": 20,
+  "wrong": 0,
+  "lit": 5,
+  "keyed": 17,
+  "added": 0,
+  "natural": 2.75,
+  "voice": "95% (20 notes)"
  }
 }

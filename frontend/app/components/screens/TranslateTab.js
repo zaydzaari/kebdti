@@ -45,7 +45,7 @@ export function TranslateTab({ profile, demo, active=true, conversationPrompt, o
   // The family: who this grandchild is, and which grandparent they are talking with.
   const [family, setFamily] = useState({ me: null, members: [] });
   const [withId, setWithId] = useState("");
-  // Auto-detect: just talk, Kebdti works out whether it is Darija, English, French, Spanish or Italian.
+  // Auto-detect: just talk, Kebdti works out which of its 8 languages it is.
   const [auto, setAutoState] = useState(true);
   useEffect(() => { try { if (localStorage.getItem("kebdti-auto") === "0") setAutoState(false); } catch {} }, []);
   function setAuto(v) { setAutoState(v); try { localStorage.setItem("kebdti-auto", v ? "1" : "0"); } catch {} reset(); }
@@ -610,7 +610,7 @@ export function TranslateTab({ profile, demo, active=true, conversationPrompt, o
               <div className="k-autorow">
                 <div className="k-autorow-text">
                   <b>Detect the language for me</b>
-                  <small>{auto ? "Just talk. Kebdti hears Darija, English, French, Spanish or Italian." : "You choose the two languages at the top."}</small>
+                  <small>{auto ? "Just talk. Kebdti hears Darija and 7 other languages: English, French, Spanish, Italian, Dutch, German and Standard Arabic." : "You choose the two languages at the top."}</small>
                 </div>
                 <Switch checked={auto} onChange={(v) => !busy && setAuto(v)} label="Detect the language for me" />
               </div>

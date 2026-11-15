@@ -98,10 +98,16 @@ check("Grandma voice  -> Yanis EN (her clone)", route({"from": "dar", "to": "en"
 check("Grandma voice  -> Lina ES (her clone)", route({"from": "dar", "to": "es", "source": "grandma", "from_id": "fatna", "to_id": "lina", "family": "[]"}, grandma_voice, True))
 check("Grandma typed  -> IT", route({"from": "dar", "to": "it", "source": "translate", "family": "[]", "text": "الله يرضي عليك أ وليدي"}, None, True))
 check("Grandma typed  -> FR", route({"from": "dar", "to": "fr", "source": "translate", "family": "[]", "text": "توحشتك بزاف أ كبدتي"}, None, True))
+check("Grandma typed  -> NL (Dutch)", route({"from": "dar", "to": "nl", "source": "translate", "family": "[]", "text": "الله يحفظك أ كبدتي، فوقاش غادي تجي؟"}, None, True))
+check("Grandma typed  -> DE (German)", route({"from": "dar", "to": "de", "source": "translate", "family": "[]", "text": "توحشتك بزاف أ وليدي، الله يرضي عليك"}, None, True))
+check("Grandma typed  -> AR (Standard Arabic)", route({"from": "dar", "to": "ar", "source": "translate", "family": "[]", "text": "أ كبدتي، الدار خاوية بلا بيك"}, None, True))
 check("Grandpa voice  -> Yanis FR (male voice, not cloned)", route({"from": "dar", "to": "fr", "source": "grandma", "from_id": "ahmed", "to_id": "yanis", "family": "[]"}, grandma_voice, False))
 YANIS_VOICE = bool(http(NX + "/api/myvoice/yanis")[1].get("ready"))
 check(f"Yanis typed FR -> Grandma ({'his own voice, set up once' if YANIS_VOICE else 'no voice set up: standard voice'})",
       route({"from": "fr", "to": "dar", "source": "translate", "from_id": "yanis", "to_id": "fatna", "consent": "0", "family": "[]", "text": "Mamie, je t'aime."}, None, YANIS_VOICE))
+check("Grandchild typed DE -> Grandma", route({"from": "de", "to": "dar", "source": "translate", "family": "[]", "text": "Oma, ich habe die Prüfung bestanden!"}, None, None))
+check("Grandchild typed NL -> Grandma", route({"from": "nl", "to": "dar", "source": "translate", "family": "[]", "text": "Oma, ik mis je heel erg."}, None, None))
+check("Grandchild typed AR (Standard Arabic) -> Grandma", route({"from": "ar", "to": "dar", "source": "translate", "family": "[]", "text": "جدتي العزيزة، اشتقت إليك كثيرا وسأزورك في الصيف."}, None, None))
 check("Lina typed ES  -> Grandpa", route({"from": "es", "to": "dar", "source": "translate", "from_id": "lina", "to_id": "ahmed", "consent": "0", "family": "[]", "text": "Abuelo, ¿cómo estás?"}, None, False))
 check("family words reach the translator", route({"from": "dar", "to": "en", "source": "translate", "family": json.dumps([{"id": "1", "word": "a l9mer", "meaning": "my moon: the nickname grandma uses for me"}]), "text": "أ القمر ديالي، فين غبرتي؟"}))
 
@@ -119,8 +125,10 @@ def auto(fields, audio=None, want_from=None, want_to=None):
 
 check("Grandma speaks (as Fatna to Yanis)  -> Darija found, EN", auto({"me_id": "fatna", "with_id": "yanis"}, grandma_voice, "dar", "en"))
 check("Yanis types Italian                 -> it, to Darija", auto({"me_id": "yanis", "with_id": "fatna", "text": "Ciao nonna, mi senti?"}, None, "it", "dar"))
+check("Yanis types German                  -> de, to Darija", auto({"me_id": "yanis", "with_id": "fatna", "text": "Hallo Oma, wie geht es dir? Ich vermisse dich."}, None, "de", "dar"))
+check("Yanis types Dutch                   -> nl, to Darija", auto({"me_id": "yanis", "with_id": "fatna", "text": "Hoi oma, hoe gaat het met je? Ik mis je."}, None, "nl", "dar"))
 check("Lina types English to Grandpa       -> en, to Darija", auto({"me_id": "lina", "with_id": "ahmed", "text": "Grandpa, I passed my exam!"}, None, "en", "dar"))
-check("German is refused, clearly", lambda: (lambda s: (s[0] == 400 and "understands" in s[1].get("message", ""), s[1].get("message", "")[:70]))(form(T, {"auto": "1", "me_id": "yanis", "with_id": "fatna", "text": "Hallo Oma, wie geht es dir?"})))
+check("Portuguese is refused, clearly", lambda: (lambda s: (s[0] == 400 and "understands" in s[1].get("message", ""), s[1].get("message", "")[:70]))(form(T, {"auto": "1", "me_id": "yanis", "with_id": "fatna", "text": "Olá avó, como você está? Tenho muitas saudades de você."})))
 
 print("=== Own voice set-up (15-30 s)")
 check("voice status answers", lambda: (lambda s: (s[0] == 200 and "ready" in s[1], f"yanis ready={s[1].get('ready')}"))(http(NX + "/api/myvoice/yanis")))
@@ -131,7 +139,7 @@ check("unknown person is refused", lambda: (lambda s: (s[0] in (400, 404), f"HTT
 print("=== Error cases (must be clear messages, never a crash)")
 check("same language on both sides", lambda: (lambda s: (s[0] == 400 and s[1].get("message"), s[1].get("message", "")[:70]))(form(T, {"from": "fr", "to": "fr", "text": "x"})))
 check("no Darija on either side", lambda: (lambda s: (s[0] == 400 and s[1].get("message"), s[1].get("message", "")[:70]))(form(T, {"from": "fr", "to": "en", "text": "x"})))
-check("language not live yet (Dutch)", lambda: (lambda s: (s[0] == 400 and s[1].get("message"), s[1].get("message", "")[:70]))(form(T, {"from": "nl", "to": "dar", "text": "x"})))
+check("language not live yet (Portuguese)", lambda: (lambda s: (s[0] == 400 and s[1].get("message"), s[1].get("message", "")[:70]))(form(T, {"from": "pt", "to": "dar", "text": "x"})))
 check("empty message, no audio -> authored sample (demo)", lambda: (lambda s: (s[0] == 200 and s[1].get("mock") is True, f"mock={s[1].get('mock')}"))(form(T, {"from": "dar", "to": "fr"})))
 check("0.1 s of audio -> 'unclear', no invented text", lambda: (lambda s: (s[0] == 200 and s[1].get("unclear") is True, f"unclear={s[1].get('unclear')}"))(form(T, {"from": "dar", "to": "fr", "source": "grandma", "family": "[]"}, silence)))
 

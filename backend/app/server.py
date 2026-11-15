@@ -37,7 +37,7 @@ app.mount("/audio", StaticFiles(directory=AUDIO), name="audio")
 FAMILY_FILE = ROOT / "data" / "family.json"
 ELDERS = {"grandmother", "grandfather"}
 CHILDREN = {"grandson", "granddaughter"}
-LIVE_LANGS = {"fr", "es", "it", "en"}
+LIVE_LANGS = {"fr", "es", "it", "en", "nl", "de", "ar"}
 DEFAULT_FAMILY = [
     {"id": "fatna", "name": "Mi Fatna", "role": "grandmother", "lang": "dar", "address": "أ جدة", "voice": "grandma-clone"},
     {"id": "ahmed", "name": "Sidi Ahmed", "role": "grandfather", "lang": "dar", "address": "أ جدي"},
@@ -392,7 +392,9 @@ def deliver_from_elder(p, darija, steps, t0, source_lang_note=None):
 
 
 LANG_NAMES = {"fr": "fr", "french": "fr", "français": "fr", "francais": "fr", "es": "es", "spanish": "es", "español": "es", "espanol": "es",
-              "it": "it", "italian": "it", "italiano": "it", "en": "en", "english": "en", "anglais": "en", "other": "other"}
+              "it": "it", "italian": "it", "italiano": "it", "en": "en", "english": "en", "anglais": "en",
+              "nl": "nl", "dutch": "nl", "nederlands": "nl", "de": "de", "german": "de", "deutsch": "de",
+              "ar": "ar", "arabic": "ar", "standard arabic": "ar", "msa": "ar", "fusha": "ar", "other": "other"}
 STOPWORDS = {
     "fr": "je tu il elle nous vous est et le la les des une un pas mais pour avec mamie papy mon ma mes ton ta très bien c'est j'ai suis moi toi".split(),
     "es": "yo tú el la los las y es está estoy pero para con mi mis tu muy bien abuela abuelo hola te que qué gracias echo".split(),
@@ -442,7 +444,7 @@ def deliver_from_child(p, src, lang, raw, steps, t0):
     said_in, guess = lang_code(tr.get("source_lang")), guess_language(src)
     # e.g. German typed in auto mode: say so, don't pretend. Refuse only when both signals agree it isn't one of ours.
     if lang not in LIVE_LANGS and said_in not in LIVE_LANGS and said_in != "?" and guess not in LIVE_LANGS:
-        return JSONResponse({"error": "Kebdti understands Darija, French, Spanish, Italian and English for now."}, status_code=400)
+        return JSONResponse({"error": "Kebdti understands Darija, English, French, Spanish, Italian, Dutch, German and Standard Arabic for now."}, status_code=400)
     detected = lang if lang in LIVE_LANGS else said_in if said_in in LIVE_LANGS else guess if guess in LIVE_LANGS else (child or {}).get("lang", "en")
     audio_url = own_voice_audio(darija, owner, steps) if consent else None
     voice_cloned = bool(audio_url)
@@ -519,8 +521,14 @@ async def message(audio: UploadFile | None = File(None), text: str = Form(""), p
         else:
             src = (text or "").strip()
             lang = pipeline.text_language(src) if src else "none"
+            # Arabic letters typed by a grandchild whose language is Standard Arabic: that's Standard Arabic, not a grandparent's Darija
+            if lang == "dar" and me and me.get("role") in CHILDREN and me.get("lang") == "ar":
+                lang = "ar"
         if not src:
             return JSONResponse({"error": "We didn't hear anything. Try again a bit closer to the phone."}, status_code=400)
+        # A grandparent's own phone is always Darija, whatever the recognizer thought (Darija and Standard Arabic share a script)
+        if me and me.get("role") in ELDERS and lang == "ar":
+            lang = "dar"
         steps["detected"] = lang
         if me and other:
             elder, child = (me, other) if me["role"] in ELDERS else (other, me)
@@ -531,7 +539,7 @@ async def message(audio: UploadFile | None = File(None), text: str = Form(""), p
             p["grandchild_lang"] = child.get("lang", "en")
             return await run_in_threadpool(deliver_from_elder, p, src, steps, t0)
         if lang not in LIVE_LANGS and lang != "auto":
-            return JSONResponse({"error": "Kebdti understands Darija, French, Spanish, Italian and English for now."}, status_code=400)
+            return JSONResponse({"error": "Kebdti understands Darija, English, French, Spanish, Italian, Dutch, German and Standard Arabic for now."}, status_code=400)
         p["from_id"], p["to_id"] = child["id"], elder["id"]
         return await run_in_threadpool(deliver_from_child, p, src, lang, raw, steps, t0)
     except Exception as e:

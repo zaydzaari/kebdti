@@ -248,7 +248,7 @@ SYS_X2D_V4 = f"""You are Kebdti. A grandchild who lives abroad sends a message t
 Same content, same amount of feeling. Warmth comes from Moroccan WORDING, never from adding things: no extra endearments, blessings, "بزاف", "فهاد الدنيا", explanations or questions that the grandchild didn't write. A practical message stays practical.
 feeling: 1 to 3 tags ONLY from {FEELINGS}; ["neutral"] alone for practical messages.
 Output ONLY a JSON object, no markdown:
-{{"darija_arabic": "...", "darija_latin": "...", "feeling": ["..."], "source_lang": "fr|es|it|en|other (the language the grandchild wrote in)"}}"""
+{{"darija_arabic": "...", "darija_latin": "...", "feeling": ["..."], "source_lang": "fr|es|it|en|nl|de|ar|other (the language the grandchild wrote in; ar = Standard Arabic)"}}"""
 
 FEWSHOT_X2D_V4 = [
     ("Sender: boy. Recipient: grandmother.\nGrandchild's message (en): Grandma I miss you so much, I can't wait to hug you.",
@@ -270,14 +270,19 @@ def family_block(family_words):
     return f"This family's own words (always use these meanings first):\n{lines}\n" if lines else ""
 
 
+# The grandchild's language, named in full for the translator ("ar" is formal Standard Arabic for an Arabic-speaking grandchild, never Darija)
+LANG_FULL = {"fr": "French", "es": "Spanish", "it": "Italian", "en": "English", "nl": "Dutch", "de": "German",
+             "ar": "Modern Standard Arabic (fusha), in Arabic script, NOT Moroccan Darija"}
+
+
 def d2x_messages(darija, latin=None, grandchild_gender=None, word_for_word_lang=None, family_words=None):
     """grandchild_gender: 'boy' / 'girl' from the family profile, or None if unknown.
     word_for_word_lang: e.g. 'fr' to also get a literal rendering for the app's crossed-out line."""
     user = family_block(family_words) + \
         (f"Grandchild (from the family profile): {grandchild_gender}\n" if grandchild_gender else "") + \
         f"Grandparent's voice message (Darija): {darija}" + (f"\n(Latin transcription: {latin})" if latin else "") + \
-        (f"\nOnly the {word_for_word_lang} translation is needed: put it in translations.{word_for_word_lang} and leave the other languages out. "
-         f"Also give word_for_word in {word_for_word_lang}." if word_for_word_lang else "")
+        (f"\nOnly the {word_for_word_lang} ({LANG_FULL.get(word_for_word_lang, word_for_word_lang)}) translation is needed: put it in translations.{word_for_word_lang} "
+         f"and leave the other languages out. Also give word_for_word in {word_for_word_lang}." if word_for_word_lang else "")
     return [{"role": "system", "content": SYS_D2X_V4}, {"role": "user", "content": user}]
 
 

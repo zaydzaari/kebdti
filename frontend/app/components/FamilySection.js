@@ -9,7 +9,7 @@ import { LANG } from "../lib/languages";
 import { getMembers, initialOf, isElder, relationOf, removeMember, saveMember, store } from "../lib/family-client";
 
 const ROLES = [["grandmother", "Grandma"], ["grandfather", "Grandpa"], ["grandson", "Grandson"], ["granddaughter", "Granddaughter"]];
-const KID_LANGS = ["fr", "es", "it", "en"];
+const KID_LANGS = ["en", "fr", "es", "it", "nl", "de", "ar"];
 
 export function FamilySection({ onToast }) {
   const [members, setMembers] = useState(null);

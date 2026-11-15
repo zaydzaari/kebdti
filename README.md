@@ -19,7 +19,7 @@ Millions of Moroccan grandparents speak only Darija. Their grandchildren grew up
 
 ## What we built
 
-**In:** a voice note (or typed message) in Darija, English, French, Spanish or Italian.
+**In:** a voice note (or typed message) in Darija or one of 7 family languages: English, French, Spanish, Italian, Dutch, German or Standard Arabic.
 
 **Out:**
 - what the sender **meant**, in the other person's language
@@ -52,7 +52,7 @@ Our own idea, our own data and our own question: *does machine translation lose 
 - **Grandmother's voice notes:** 16, cleaned and transcribed. They are private and **not** in this repo.
 
 **Model (pipeline, [`backend/app/pipeline.py`](backend/app/pipeline.py)):**
-1. **Speech recognition:** Gemini, with auto-detect of Darija, English, French, Spanish and Italian. It refuses silence instead of guessing.
+1. **Speech recognition:** Gemini, with auto-detect of all 8 languages. A grandparent's phone is always treated as Darija, because Darija and Standard Arabic share a script. It refuses silence instead of guessing.
 2. **Translation of the meaning:** GPT-6 Luna, with our Kebdti prompt (knowledge base, "faithfulness contract", the family's own words), returning JSON.
    - A second check rewrites any non-Moroccan Arabic words.
 3. **Voice in the sender's own voice:**
@@ -64,7 +64,7 @@ Our own idea, our own data and our own question: *does machine translation lose 
 
 ## Results
 
-**In one line:** on fresh messages in 4 languages, the baseline fully understood **48/80** and Kebdti **67/80**. It fell into word-for-word traps **5 times instead of 24**.
+**In one line:** on fresh messages in 7 languages, the baseline fully understood **91/140** and Kebdti **115/140**. It fell into word-for-word traps **15 times instead of 40**.
 
 **Translation, on earlier held-out sets** (English output, judged blind by a different model, GPT-6.1 Terra):
 
@@ -101,7 +101,15 @@ Our own idea, our own data and our own question: *does machine translation lose 
 | French | 12 → **15** /20 | 6 → **1** | 2.45 → 2.85 | 99% (20 notes) | 5/5 |
 | Spanish | 13 → **19** /20 | 5 → **0** | 2.65 → 3.00 | 99% (20 notes) | 5/5 |
 | Italian | 12 → **17** /20 | 6 → **2** | 2.60 → 2.80 | 99% (20 notes) | 5/5 |
-| **All four** | **48 → 67 /80** | **24 → 5 /68** | | | 20/20 |
+| Dutch | 13 → **18** /20 | 6 → **2** | 2.50 → 2.75 | 99% (20 notes) | 5/5 |
+| German | 14 → **15** /20 | 6 → **3** | 2.35 → 2.85 | 100% (20 notes) | 5/5 |
+| Standard Arabic | **16** → 15 /20 | **4** → 5 | 2.65 → 2.75 | 95% (20 notes) | 5/5 |
+| **All seven** | **91 → 115 /140** | **40 → 15 /119** | | | 35/35 |
+
+**Kebdti helps most where the gap between cultures is biggest:**
+- **Spanish, Dutch, Italian and English** gain the most.
+- **German** gains a little.
+- **Standard Arabic gains nothing:** "يا كبدي" is a real endearment in Arabic too, so a plain translation already keeps the warmth. Here Kebdti's main value is the Moroccan voice and the "why it's said this way" note, not the wording.
 
 The Darija voice (her clone speaking Darija) was harder: 62% of words heard back before our fixes, about 98% after the pause and listen-back fixes.
 
@@ -110,10 +118,10 @@ The Darija voice (her clone speaking Darija) was harder: 62% of words heard back
 - Grandchild's own voice: 99% clear (vs 94% before tuning).
 - Mixing languages in the set-up recording made voices robotic: 79% of words kept, vs 91% for one clean recording. So the app asks for one 15–30 s recording.
 
-**Whole system:** 38/38 end-to-end checks pass on the live app ([`backend/eval/check_az.py`](backend/eval/check_az.py)). They cover:
-- both directions and all 5 languages
+**Whole system:** 46 end-to-end checks on the app pass ([`backend/eval/check_az.py`](backend/eval/check_az.py)). They cover:
+- both directions and all 8 languages
 - language auto-detection
-- unsupported languages refused clearly (German)
+- unsupported languages refused clearly (Portuguese)
 - silence and 0.1 s recordings returned as "unclear", never invented
 
 **Where it fails, and why we think so:**
@@ -131,7 +139,7 @@ The Darija voice (her clone speaking Darija) was harder: 62% of words heard back
 ## What we'd do next
 
 1. Have a panel of Darija-speaking grandparents and grandchildren rate meaning and voice, per language, and compare with the AI judge.
-2. Add other regions' Darija, and the next diaspora language (Dutch), using the same held-out method.
+2. Add other regions' Darija (Jebli, Hassaniya, Souss). Then test with real Darija-speaking families instead of designed demo voices, using the same held-out method.
 
 ## Ethics
 

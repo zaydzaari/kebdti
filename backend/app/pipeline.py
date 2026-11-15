@@ -27,7 +27,8 @@ load_dotenv(ROOT / ".env")
 import prompts_v4 as prompts  # noqa: E402
 from bench_translate import extract_json  # noqa: E402
 
-LANG_NAMES = {"fr": "French", "es": "Spanish", "it": "Italian", "en": "English", "darija": "Moroccan Darija"}
+LANG_NAMES = {"fr": "French", "es": "Spanish", "it": "Italian", "en": "English", "nl": "Dutch", "de": "German",
+              "ar": "Modern Standard Arabic", "darija": "Moroccan Darija"}
 TRANSLATE_MODEL = "gpt-6-luna"
 ASR_MODEL = "gemini-3.8-flash"
 TTS_MODELS = ["gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"]
@@ -127,10 +128,10 @@ def _clean_transcript(text):
 
 
 ASR_AUTO = ("You transcribe a family voice message. It is in ONE of: Moroccan Darija (elderly speakers, maybe rural or northern accent), "
-            "French, Spanish, Italian or English. First decide the language, then write exactly what is said: Darija in Arabic script the way "
+            "French, Spanish, Italian, English, Dutch, German or Modern Standard Arabic (formal fusha, as on the news; NOT Moroccan dialect). Moroccan dialect is always dar, even with some fusha words. First decide the language, then write exactly what is said: Darija in Arabic script the way "
             "Moroccans write it (keep French loanwords as said), other languages in their normal spelling. No translation, no comments. "
             "If there is no clear speech (silence, noise, music, too short), use language \"none\" and empty text. Never guess words. "
-            'Output ONLY JSON: {"language": "dar|fr|es|it|en|other|none", "text": "..."}')
+            'Output ONLY JSON: {"language": "dar|fr|es|it|en|nl|de|ar|other|none", "text": "..."}')
 
 
 def _asr_call(msgs, max_tokens=2000):

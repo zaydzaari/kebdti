@@ -16,6 +16,9 @@ const READ_ME = {
   es: "¡Hola abuela, soy yo! Grabo mi voz para que me escuches de verdad, aunque esté lejos. Aquí todo va bien, el colegio va bien y pienso mucho en ti. Tengo muchas ganas de volver, comer tu cuscús del viernes y escuchar tus historias.",
   it: "Ciao nonna, sono io! Registro la mia voce così mi senti davvero, anche da lontano. Qui va tutto bene, la scuola va bene e ti penso spesso. Non vedo l'ora di tornare, mangiare il tuo cuscus del venerdì e ascoltare le tue storie.",
   en: "Hi grandma, it's me! I'm recording my voice so you can really hear me, even from far away. Everything is fine here, school is going well, and I think about you a lot. I can't wait to come back, eat your Friday couscous and listen to your stories.",
+  nl: "Hoi oma, ik ben het! Ik neem mijn stem op zodat je me echt kunt horen, ook van ver weg. Alles gaat goed hier, school gaat prima en ik denk vaak aan je. Ik kan niet wachten om terug te komen, je couscous van vrijdag te eten en naar je verhalen te luisteren.",
+  de: "Hallo Oma, ich bin's! Ich nehme meine Stimme auf, damit du mich wirklich hörst, auch von weit weg. Hier ist alles gut, die Schule läuft gut und ich denke oft an dich. Ich kann es kaum erwarten, zurückzukommen, deinen Freitags-Couscous zu essen und deinen Geschichten zuzuhören.",
+  ar: "مرحبا يا جدتي، هذا أنا! أسجل صوتي لكي تسمعيني حقا، حتى من بعيد. كل شيء بخير هنا، والدراسة تسير جيدا، وأفكر فيك كثيرا. أنتظر بفارغ الصبر أن أعود لآكل كسكس الجمعة وأستمع إلى حكاياتك.",
   dar: "السلام عليكم أوليداتي. هادا صوتي باش تسمعوني ديما. الحمد لله أنا بخير والدار بخير. توحشتكم بزاف وكندعي معاكم كل نهار. الله يحفظكم ويرضي عليكم، وما تنساوش تعيطو عليا.",
 };
 
@@ -93,7 +96,7 @@ export function VoiceSetup({ memberId, name, lang = "en", self = true, active = 
   const ready = !!status?.ready, recording = phase === "recording", uploading = phase === "uploading";
   const enough = seconds >= MIN, left = Math.max(0, MIN - seconds);
   const who = self ? "you" : name;
-  const text = lang === "dar" ? READ_ME.dar : READ_ME.en;
+  const text = READ_ME[lang] || READ_ME.en;
   const textMeaning = lang === "dar" ? "Peace be upon you, my children. This is my voice so you can always hear me. Thank God I am well and the house is well. I miss you so much and I pray for you every day. May God protect you, and don't forget to call me." : "";
 
   return (
@@ -110,7 +113,7 @@ export function VoiceSetup({ memberId, name, lang = "en", self = true, active = 
       <AnimatePresence mode="wait" initial={false}>
         {recording ? (
           <motion.div key="rec" className="vs-rec" {...swapIn}>
-            <p className="vs-read" dir="auto" lang={lang === "dar" ? "ar" : "en"}>{text}</p>
+            <p className="vs-read" dir="auto" lang={lang === "dar" ? "ar" : lang}>{text}</p>
             {textMeaning && <p className="vs-meaning">{textMeaning}</p>}
             <LiveWaveform stream={stream} />
             <div className="vs-meter" role="progressbar" aria-valuemin={0} aria-valuemax={MAX} aria-valuenow={seconds} aria-label="Recording length">

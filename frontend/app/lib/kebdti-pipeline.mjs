@@ -5,7 +5,7 @@
 
 export const PIPELINE_URL = (process.env.KEBDTI_PIPELINE_URL || 'http://127.0.0.1:8000').replace(/\/$/, '');
 export const LIVE_TRANSLATE = process.env.NEXT_PUBLIC_TRANSLATE_MODE !== 'sample';
-const SUPPORTED = ['fr', 'es', 'it', 'en'];
+const SUPPORTED = ['fr', 'es', 'it', 'en', 'nl', 'de', 'ar'];
 const FEEL = { love: 'affection', longing: 'longing', care: 'care', worry: 'worry', pride: 'pride', blessing: 'blessing',
                humor: 'humour', gratitude: 'gratitude', sadness: 'sadness', neutral: 'everyday' };
 
@@ -76,7 +76,7 @@ export async function liveTranslate(form) {
   if (from === to) throw new PipelineError(400, 'LANGUAGE_PAIR', 'Choose two different languages.');
   if (from !== 'dar' && to !== 'dar') throw new PipelineError(400, 'LANGUAGE_PAIR', 'Kebdti translates between Darija and your family\'s language. Set one side to Darija.');
   const other = from === 'dar' ? to : from;
-  if (!SUPPORTED.includes(other)) throw new PipelineError(400, 'LANGUAGE_SOON', 'Kebdti speaks French, Spanish, Italian and English with Darija for now. More languages are coming.');
+  if (!SUPPORTED.includes(other)) throw new PipelineError(400, 'LANGUAGE_SOON', 'Kebdti speaks English, French, Spanish, Italian, Dutch, German and Standard Arabic with Darija for now. More languages are coming.');
 
   const audio = form.get('audio'), text = String(form.get('text') || '').trim();
   const hasAudio = audio && typeof audio === 'object' && audio.size > 0;

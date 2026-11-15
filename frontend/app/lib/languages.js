@@ -33,8 +33,8 @@ export function explainCode(from, to) {
   return to;
 }
 
-// Live translation (speech recognition + GPT-6 Luna + voice) is tested for Darija with these four languages.
-export const LIVE_CODES = ["dar", "fr", "es", "it", "en"];
+// Live translation (speech recognition + GPT-6 Luna + voice): Darija with these seven languages.
+export const LIVE_CODES = ["dar", "en", "fr", "es", "it", "nl", "de", "ar"];
 
 // Kebdti always translates to or from Darija. Picking a non-Darija language on one side puts Darija on the other.
 export function safePair(from, to) {
