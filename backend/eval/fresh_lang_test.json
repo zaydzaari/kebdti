@@ -1,0 +1,145 @@
+{
+ "_note": "Fresh held-out set for the per-language test (Nov 15, 2026, evening). Written AFTER prompt v4.3 was frozen; key expressions checked against eval/prompts_v4.py and every earlier set (eval/fresh_lang_leakcheck.py). Darija and gold meanings written by the assistant, to be checked by the team's Darija speaker. 'key' = the expression that a word-for-word translation would get wrong; neutral messages have none.",
+ "items": [
+  {
+   "id": "f01",
+   "darija": "أ قلبي، راه البرد هاد العام قاسح، لبس مزيان وما تخرجش بشعرك فازگ.",
+   "key": "شعرك فازگ",
+   "type": "care",
+   "gold": "My heart, it's very cold this year. Dress warmly and don't go out with wet hair."
+  },
+  {
+   "id": "f02",
+   "darija": "الحلوة اللي صيفطتي ليا أ بنتي، والله حتى لحستها بصبعي.",
+   "key": "حتى لحستها بصبعي",
+   "type": "affection",
+   "gold": "The cake you sent me, my girl, was so good I licked my fingers clean."
+  },
+  {
+   "id": "f03",
+   "darija": "ما تبقاش تقلق راسك على الامتحان، اللي كتب الله هو اللي غادي يكون.",
+   "key": "اللي كتب الله",
+   "type": "faith",
+   "gold": "Stop worrying about the exam. Whatever God has written is what will happen."
+  },
+  {
+   "id": "f04",
+   "darija": "سير أ ولدي الله يسهل عليك ويحل ليك الباب.",
+   "key": "يحل ليك الباب",
+   "type": "blessing",
+   "gold": "Go, my son. May God make it easy for you and open the way for you."
+  },
+  {
+   "id": "f05",
+   "darija": "ما بقيتيش كتعيط، حتى ولينا كنسولو عليك الجيران.",
+   "key": "كنسولو عليك الجيران",
+   "type": "longing",
+   "gold": "You don't call anymore; we've started asking the neighbours about you (a gentle reproach)."
+  },
+  {
+   "id": "f06",
+   "darija": "دارنا كتسناك، والزيتون ديال هاد العام كيشهي.",
+   "key": "كيشهي",
+   "type": "longing",
+   "gold": "Our home is waiting for you, and this year's olives are delicious."
+  },
+  {
+   "id": "f07",
+   "darija": "عينيا ما شبعوش منك فالصيف، رجع بكري هاد المرة.",
+   "key": "عينيا ما شبعوش منك",
+   "type": "longing",
+   "gold": "I didn't get to see enough of you this summer. Come back sooner this time."
+  },
+  {
+   "id": "f08",
+   "darija": "كبر وصار راجل، الله يحضيه من العين.",
+   "key": "الله يحضيه من العين",
+   "type": "blessing",
+   "gold": "He's grown into a man. May God protect him from the evil eye."
+  },
+  {
+   "id": "f09",
+   "darija": "خالتك مريضة شوية، عيط ليها وفرحها بحسك.",
+   "key": "فرحها بحسك",
+   "type": "care",
+   "gold": "Your aunt is a little sick. Call her and cheer her up by letting her hear your voice."
+  },
+  {
+   "id": "f10",
+   "darija": "دير الخير وكبو فالبحر، ما تسناش شي حاجة من حد.",
+   "key": "دير الخير وكبو فالبحر",
+   "type": "proverb",
+   "gold": "Do good and forget about it. Don't expect anything back from anyone."
+  },
+  {
+   "id": "f11",
+   "darija": "ديما كنقول ليهم: هاد الدري راسو قاصح بحال جدو.",
+   "key": "راسو قاصح",
+   "type": "humour",
+   "gold": "I always tell them: this boy is stubborn, just like his grandfather."
+  },
+  {
+   "id": "f12",
+   "darija": "الدنيا هانية هنا، غير الشتا ما بغاتش تطيح.",
+   "key": "",
+   "type": "neutral",
+   "gold": "Everything is fine here, it just won't rain."
+  },
+  {
+   "id": "f13",
+   "darija": "صيفط ليا التصاور ديال العرس، بغيت نشوف شكون جا.",
+   "key": "",
+   "type": "neutral",
+   "gold": "Send me the wedding photos, I want to see who came."
+  },
+  {
+   "id": "f14",
+   "darija": "قول لماماك تجيب معاها الدوا ديالي من الفرمسيان.",
+   "key": "",
+   "type": "neutral",
+   "gold": "Tell your mom to bring my medicine from the pharmacy."
+  },
+  {
+   "id": "f15",
+   "darija": "الله يوصلك لداك الشي اللي فبالك أ وليدي، ونشوف ولادك قبل ما نموت.",
+   "key": "يوصلك لداك الشي اللي فبالك",
+   "type": "blessing",
+   "gold": "May all your wishes come true, my boy, and may I see your children before I die."
+  },
+  {
+   "id": "f16",
+   "darija": "واش باقي كتاكل غير الماكلة ديال الزنقة؟ وجهك ولا صفر فالتصويرة.",
+   "key": "وجهك ولا صفر",
+   "type": "worry",
+   "gold": "Are you still only eating street food? You look pale in the photo."
+  },
+  {
+   "id": "f17",
+   "darija": "حتى زين ما خطاتو لولا، وانتي زوينة وعاقلة.",
+   "key": "حتى زين ما خطاتو لولا",
+   "type": "proverb",
+   "gold": "Nobody is perfect, and you are beautiful and sensible."
+  },
+  {
+   "id": "f18",
+   "darija": "ضربني الحنين ليك البارح، بقيت كنشوف فالتيليفون حتى نعست.",
+   "key": "ضربني الحنين",
+   "type": "longing",
+   "gold": "I missed you so much last night. I kept looking at my phone until I fell asleep."
+  },
+  {
+   "id": "f19",
+   "darija": "نتا وخوك بحال الظفر واللحم، ما تخليو حتى حاجة تفرقكم.",
+   "key": "بحال الظفر واللحم",
+   "type": "proverb",
+   "gold": "You and your brother are inseparable. Don't let anything come between you."
+  },
+  {
+   "id": "f20",
+   "darija": "ما تبقاش تجري ورا الدنيا، الصحة هي الكنز أ بنتي.",
+   "key": "الصحة هي الكنز",
+   "type": "care",
+   "gold": "Don't keep chasing after the world. Your health is the real treasure, my girl."
+  }
+ ]
+}

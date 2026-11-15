@@ -1,0 +1,82 @@
+{
+ "en:baseline": {
+  "full": 11,
+  "n": 20,
+  "wrong": 0,
+  "lit": 7,
+  "keyed": 17,
+  "added": 1,
+  "natural": 2.5,
+  "voice": ""
+ },
+ "en:kebdti": {
+  "full": 16,
+  "n": 20,
+  "wrong": 0,
+  "lit": 2,
+  "keyed": 17,
+  "added": 0,
+  "natural": 2.8,
+  "voice": "99% (20 notes)"
+ },
+ "fr:baseline": {
+  "full": 12,
+  "n": 20,
+  "wrong": 0,
+  "lit": 6,
+  "keyed": 17,
+  "added": 2,
+  "natural": 2.45,
+  "voice": ""
+ },
+ "fr:kebdti": {
+  "full": 15,
+  "n": 20,
+  "wrong": 0,
+  "lit": 1,
+  "keyed": 17,
+  "added": 2,
+  "natural": 2.85,
+  "voice": "99% (20 notes)"
+ },
+ "es:baseline": {
+  "full": 13,
+  "n": 20,
+  "wrong": 1,
+  "lit": 5,
+  "keyed": 17,
+  "added": 1,
+  "natural": 2.65,
+  "voice": ""
+ },
+ "es:kebdti": {
+  "full": 19,
+  "n": 20,
+  "wrong": 0,
+  "lit": 0,
+  "keyed": 17,
+  "added": 2,
+  "natural": 3.0,
+  "voice": "99% (20 notes)"
+ },
+ "it:baseline": {
+  "full": 12,
+  "n": 20,
+  "wrong": 1,
+  "lit": 6,
+  "keyed": 17,
+  "added": 1,
+  "natural": 2.6,
+  "voice": ""
+ },
+ "it:kebdti": {
+  "full": 17,
+  "n": 20,
+  "wrong": 1,
+  "lit": 2,
+  "keyed": 17,
+  "added": 1,
+  "natural": 2.8,
+  "voice": "99% (20 notes)"
+ }
+}

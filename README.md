@@ -37,7 +37,7 @@ Millions of Moroccan grandparents speak only Darija. Their grandchildren grew up
 Our own idea, our own data and our own question: *does machine translation lose the love in a grandmother's words?*
 
 - **A knowledge base of elder Darija:** endearments, blessings and proverbs, written by us, a Darija speaker.
-- **Held-out test sets** of grandparent messages, never shown to the model while we tuned it.
+- **Held-out test sets** of grandparent messages, never shown to the model while we tuned it, including a fresh per-language set written after the prompt was frozen.
 - **Real voice notes from our own grandmother, used with her consent:**
   - to clone her voice
   - to test speech recognition on an elderly speaker
@@ -48,6 +48,7 @@ Our own idea, our own data and our own question: *does machine translation lose 
 - **Knowledge base:** in [`backend/eval/prompts_v4.py`](backend/eval/prompts_v4.py).
 - **Development sets:** 66 messages ([`backend/eval/*_phrases.json`](backend/eval)).
 - **Three held-out test sets:** 41, 31 and 32 messages ([`final_phrases.json`](backend/eval/final_phrases.json), [`final_test_v4.json`](backend/eval/final_test_v4.json), [`round5_test.json`](backend/eval/round5_test.json)). Each set was written *before* testing and only added to the prompt afterwards. Every test result below comes from a set the prompt had not yet seen.
+- **A fourth, fresh set for the per-language test:** 20 messages. It was written after the app's prompt was frozen and leak-checked against it ([`fresh_lang_leakcheck.py`](backend/eval/fresh_lang_leakcheck.py)).
 - **Grandmother's voice notes:** 16, cleaned and transcribed. They are private and **not** in this repo.
 
 **Model (pipeline, [`backend/app/pipeline.py`](backend/app/pipeline.py)):**
@@ -63,7 +64,9 @@ Our own idea, our own data and our own question: *does machine translation lose 
 
 ## Results
 
-**Translation, on held-out messages** (English output, judged blind by a different model, GPT-6.1 Terra):
+**In one line:** on fresh messages in 4 languages, the baseline fully understood **48/80** and Kebdti **67/80**. It fell into word-for-word traps **5 times instead of 24**.
+
+**Translation, on earlier held-out sets** (English output, judged blind by a different model, GPT-6.1 Terra):
 
 | Test set | Measure | Baseline (plain prompt) | Kebdti |
 |---|---|---|---|
@@ -86,17 +89,21 @@ Our own idea, our own data and our own question: *does machine translation lose 
 | طاحت الصمعة علقو الحجام | They blamed the wrong person | "The minaret collapsed, and they hanged the barber." | "When something goes wrong, they look for a scapegoat." |
 | الكلمة الزوينة كتخرج الحنش من غارو | A kind word can win over anyone | "A kind word draws the snake out of its den." | "You catch more flies with honey than with vinegar." |
 | عواشرك مبروكة أوليدي، الله يعاودها عليك | Happy Eid, my boy, many more | "May your festive days be blessed, my son…" | "Happy Eid, my son. May God let you celebrate it again." |
+| نتا وخوك بحال الظفر واللحم | You and your brother are inseparable | "You and your brother are like nail and flesh…" | "You and your brother are so close—don't let anything come between you." |
+| وجهك ولا صفر فالتصويرة | You look pale in the photo | "Your face looks all yellow in the photo." | "You look pale in the picture." |
 | أكبيدتي، توحشتك بزاف… | My darling, I miss you so much… | word for word: "My liver, I missed you a lot…" | "My darling, I miss you so much. When are you coming?" |
 
-**By language:**
+**By language, on 20 fresh messages** written after the app's prompt was frozen and leak-checked against it ([`fresh_lang_test.json`](backend/eval/fresh_lang_test.json), [`lang_report.md`](backend/eval/results/lang_report.md)). Same model for both systems; judged blind in each language:
 
-| Language | Into that language (grandma speaking) | Into Darija (grandchild speaking) | Voice: words heard back correctly |
-|---|---|---|---|
-| English | 25/31 fully understood (above) | 17/17 pure Moroccan Darija (no foreign-Arabic words) | 100% (3/3 sentences) |
-| French | being measured | 1/1 pure Darija (spot check) | 100% (3/3) |
-| Spanish | being measured | 1/1 pure Darija (spot check) | 100% (3/3) |
-| Italian | being measured | 1/1 pure Darija (spot check) | 100% (3/3) |
-| Darija (her cloned voice) | — | — | 62% before our fixes → about 98% after the pause and listen-back fixes |
+| Language | Fully understood: baseline → Kebdti | Literal traps (of 17): baseline → Kebdti | Sounds natural (1–3) | Her cloned voice: words heard back | Into Darija: pure Moroccan Darija |
+|---|---|---|---|---|---|
+| English | 11 → **16** /20 | 7 → **2** | 2.50 → 2.80 | 99% (20 notes) | 5/5 |
+| French | 12 → **15** /20 | 6 → **1** | 2.45 → 2.85 | 99% (20 notes) | 5/5 |
+| Spanish | 13 → **19** /20 | 5 → **0** | 2.65 → 3.00 | 99% (20 notes) | 5/5 |
+| Italian | 12 → **17** /20 | 6 → **2** | 2.60 → 2.80 | 99% (20 notes) | 5/5 |
+| **All four** | **48 → 67 /80** | **24 → 5 /68** | | | 20/20 |
+
+The Darija voice (her clone speaking Darija) was harder: 62% of words heard back before our fixes, about 98% after the pause and listen-back fixes.
 
 **Voices:**
 - Grandmother's voice: a short pause after the pet name made the opening words heard right 8/8 times (vs 6/8 before).
@@ -111,12 +118,14 @@ Our own idea, our own data and our own question: *does machine translation lose 
 
 **Where it fails, and why we think so:**
 - **"إمتى نفرح بيك"** came out as "When will you make me happy?" instead of "When will I see you married?". The model doesn't know this idiom.
+- **"حتى زين ما خطاتو لولا"** (nobody is perfect) failed in all 4 languages. In Italian the model even read "لولا" as a name, "Lola".
+- **"وجهك ولا صفر"** (you look pale) still came out as "yellow face" in French and Italian, and the regional word **"فازگ"** (wet hair) became "head uncovered".
 - **Rare proverbs keep their image** ("one hand can't clap"), with the meaning only in the note. Once, for an unknown proverb, the model **invented** a confident wrong one ("Who dares, wins"). We added a rule: never invent; say "Kebdti isn't sure, ask what she meant".
 - **Darija voices are harder than European ones:** Darija has no standard spelling and few training voices. That is why every Darija voice note is listened back.
 - **It is slow for a phone call:** about 10–15 seconds per message. That's fine for voice notes, which are asynchronous.
 - **Honest limits:**
   - The meaning was judged by an AI, plus our own checks as a Darija speaker, not by a panel.
-  - Gold meanings were written by us.
+  - Gold meanings were written by us, with an AI assistant.
   - Our test sets are small (31–41 messages) and mostly from one region (near Taounate).
 
 ## What we'd do next
