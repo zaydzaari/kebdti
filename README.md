@@ -4,7 +4,7 @@
 
 A grandmother in Morocco sends a voice note in Darija. Her grandson in France hears what she *meant*, in English, **in her own voice**. He answers in his language, and she hears it in Darija, **in his voice**.
 
-- **Demo video (2 min):** link coming soon
+- **Demo video (1:20):** https://youtu.be/fjIF3dts178
 - **Try it live:** https://kebdti2.51-170-131-7.sslip.io
   - Tap **Skip** to open Yanis's phone. Open **/grandma** for Mi Fatna's phone.
 - **Starting point:** our own idea (4.4.4)
