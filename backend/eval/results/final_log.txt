@@ -1,0 +1,25 @@
+{
+ "luna_plain": {
+  "avg": 1.5609756097560976,
+  "full": 23,
+  "zero": 0,
+  "added": 4,
+  "traps": 4
+ },
+ "luna_v31": {
+  "avg": 1.7317073170731707,
+  "full": 30,
+  "zero": 0,
+  "added": 4,
+  "traps": 1
+ },
+ "gemini_v31": {
+  "avg": 1.8048780487804879,
+  "full": 34,
+  "zero": 1,
+  "added": 7,
+  "traps": 1
+ }
+}
+report: C:\Users\me\Desktop\hackaton\eval\results\final_report.md
+cost: $0.1516

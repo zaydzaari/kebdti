@@ -1,0 +1,23 @@
+{
+  "_note": "Round 3: writing Darija for the grandparent (FR/ES/IT/EN -> Darija). y01-y12 are new; x01-x06 are repeated from Round 2 for comparison. 'sender' is the grandchild's gender (Darija marks it on adjectives like fer7an/fer7ana). Neutral items check that the model doesn't add emotion.",
+  "x_to_darija": [
+    {"id": "x01", "lang": "fr", "sender": "unknown", "to": "grandmother", "text": "Mamie, j'ai eu mon bac avec mention ! Tu es fière de moi ?", "feeling": ["pride"]},
+    {"id": "x02", "lang": "es", "sender": "unknown", "to": "grandmother", "text": "Abuela, mañana es mi cumpleaños. ¿Me vas a llamar?", "feeling": ["love"]},
+    {"id": "x03", "lang": "it", "sender": "unknown", "to": "grandmother", "text": "Nonna, ho la febbre ma sto bene, non preoccuparti.", "feeling": ["care"]},
+    {"id": "x04", "lang": "en", "sender": "unknown", "to": "grandmother", "text": "Grandma, I'm learning to cook your tagine. It's not as good as yours!", "feeling": ["humor", "love"]},
+    {"id": "x05", "lang": "fr", "sender": "unknown", "to": "grandmother", "text": "Je t'aime fort, mamie. Prends soin de toi.", "feeling": ["love", "care"]},
+    {"id": "x06", "lang": "en", "sender": "unknown", "to": "grandfather", "text": "Grandpa, I'm coming to Morocco for Eid with mom and dad.", "feeling": ["longing"]},
+    {"id": "y01", "lang": "fr", "sender": "girl", "to": "grandmother", "text": "Mamie, j'ai eu mon permis du premier coup ! Je suis trop contente.", "feeling": ["pride"]},
+    {"id": "y02", "lang": "en", "sender": "boy", "to": "grandmother", "text": "Grandma, I miss your bread so much. Nothing here tastes like home.", "feeling": ["longing"]},
+    {"id": "y03", "lang": "es", "sender": "girl", "to": "grandfather", "text": "Abuelo, ¿cómo está tu rodilla? ¿Fuiste al médico?", "feeling": ["care", "worry"]},
+    {"id": "y04", "lang": "it", "sender": "boy", "to": "grandmother", "text": "Nonna, arrivo sabato alle 15. Papà viene a prenderti.", "feeling": ["neutral"]},
+    {"id": "y05", "lang": "fr", "sender": "boy", "to": "grandfather", "text": "Papy, j'ai prié pour toi à la mosquée vendredi.", "feeling": ["love", "blessing"]},
+    {"id": "y06", "lang": "en", "sender": "girl", "to": "grandmother", "text": "Grandma, I got engaged! He's a good man, you'll love him.", "feeling": ["pride", "love"]},
+    {"id": "y07", "lang": "es", "sender": "boy", "to": "grandmother", "text": "Abuela, perdón por no llamarte esta semana, tuve muchos exámenes.", "feeling": ["care"]},
+    {"id": "y08", "lang": "fr", "sender": "girl", "to": "grandmother", "text": "Le colis est arrivé, merci. Il y avait les gâteaux et l'huile d'olive.", "feeling": ["gratitude"]},
+    {"id": "y09", "lang": "en", "sender": "boy", "to": "grandfather", "text": "Grandpa, tell me again the story of when you came to France in 1972.", "feeling": ["love"]},
+    {"id": "y10", "lang": "it", "sender": "girl", "to": "grandmother", "text": "Nonna, ti voglio bene. Sei la persona più forte che conosco.", "feeling": ["love", "pride"]},
+    {"id": "y11", "lang": "fr", "sender": "boy", "to": "grandmother", "text": "Mamie, mon téléphone était cassé, c'est pour ça que je ne répondais pas.", "feeling": ["neutral"]},
+    {"id": "y12", "lang": "en", "sender": "girl", "to": "grandmother", "text": "Happy Eid grandma! I wish I was there with you.", "feeling": ["blessing", "longing"]}
+  ]
+}

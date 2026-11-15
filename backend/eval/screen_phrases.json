@@ -1,0 +1,34 @@
+{
+  "_note": "Screening set written by the team/assistant for MODEL SELECTION ONLY. Not part of the final test set (real grandma phrases collected from family are the test set).",
+  "darija_to_x": [
+    {"id": "s01", "category": "endearment+blessing", "darija": "يا كبدتي، إمتى غادي تجي؟ الله يرضي عليك أوليدي.", "latin": "a kebdti, imta ghadi tji? lah yrdi 3lik a wlidi.",
+     "meaning_en": "My darling, when are you coming? God bless you, my dear boy.", "feeling": ["love", "longing", "blessing"],
+     "literal_traps": ["liver", "foie", "hígado", "higado", "fegato", "satisfied", "satisfait", "satisfecho", "soddisfatto"]},
+    {"id": "s02", "category": "endearment", "darija": "الله يخليك ليا أبنتي.", "latin": "lah ykhlik liya a benti.",
+     "meaning_en": "I love you so much, my dear girl (I pray God keeps you in my life).", "feeling": ["love", "blessing"],
+     "literal_traps": ["keep you for me", "te garde pour moi", "te guarde para mí", "ti tenga per me", "ti conservi per me"]},
+    {"id": "s03", "category": "care", "darija": "واش كليتي مزيان؟ ما تبقاش تسهر بزاف.", "latin": "wach kliti mzyan? ma tb9ach tsehher bzaf.",
+     "meaning_en": "Have you been eating well? Don't stay up too late.", "feeling": ["care", "worry"], "literal_traps": []},
+    {"id": "s04", "category": "longing", "darija": "توحشتك بزاف، الدار خاوية بلا بيك.", "latin": "twe7chtek bzaf, ddar khawya bla bik.",
+     "meaning_en": "I miss you so much, the house feels empty without you.", "feeling": ["longing", "love"], "literal_traps": []},
+    {"id": "s05", "category": "blessing", "darija": "الله يحفظك وينجحك فقرايتك.", "latin": "lah y7fdek w ynjjhek f qraytek.",
+     "meaning_en": "May God protect you and help you succeed in your studies.", "feeling": ["blessing", "care"], "literal_traps": []},
+    {"id": "s06", "category": "logistics", "darija": "خالك عيط اليوم، كيسلم عليك.", "latin": "khalek 3iyet lyoum, kaysllem 3lik.",
+     "meaning_en": "Your uncle called today, he says hi.", "feeling": ["neutral"], "literal_traps": []},
+    {"id": "s07", "category": "logistics", "darija": "الشتا طاحت اليوم بزاف، الحمد لله.", "latin": "chta ta7t lyoum bzaf, l7amdulillah.",
+     "meaning_en": "It rained a lot today, thank God.", "feeling": ["neutral", "gratitude"], "literal_traps": ["winter fell", "l'hiver est tombé", "el invierno cayó", "l'inverno è caduto"]},
+    {"id": "s08", "category": "proverb", "darija": "اللي بغا العسل يصبر لقريص النحل.", "latin": "lli bgha l3sel ysber l9ris n7el.",
+     "meaning_en": "If you want the honey, you have to put up with the bee stings (no pain, no gain).", "feeling": ["care"], "literal_traps": []},
+    {"id": "s09", "category": "humor", "darija": "وليتي طويل بحال النخلة، ولكن مازال ما عرفتيش تطيب!", "latin": "wlliti twil b7al nkhla, walakin mazal ma 3reftich ttiyeb!",
+     "meaning_en": "You've grown as tall as a palm tree, but you still don't know how to cook!", "feeling": ["humor", "love"], "literal_traps": []},
+    {"id": "s10", "category": "endearment", "darija": "يا عينيا، نتا اللي عندي فهاد الدنيا.", "latin": "a 3iniya, nta lli 3ndi f had ddenya.",
+     "meaning_en": "My dear, you mean everything to me in this world.", "feeling": ["love"],
+     "literal_traps": ["my eyes", "mes yeux", "mis ojos", "occhi miei", "miei occhi"]}
+  ],
+  "x_to_darija": [
+    {"id": "r01", "lang": "fr", "text": "Mamie, tu me manques tellement. Je viens cet été, promis !", "meaning_en": "Grandma, I miss you so much. I'm coming this summer, I promise!", "feeling": ["longing", "love"]},
+    {"id": "r02", "lang": "es", "text": "Abuela, te quiero mucho. ¿Cómo estás de salud? Tómate tus medicinas.", "meaning_en": "Grandma, I love you so much. How is your health? Take your medicine.", "feeling": ["love", "care"]},
+    {"id": "r03", "lang": "it", "text": "Nonna, ho passato l'esame! Grazie per tutte le tue preghiere.", "meaning_en": "Grandma, I passed the exam! Thank you for all your prayers.", "feeling": ["pride", "gratitude"]},
+    {"id": "r04", "lang": "en", "text": "Grandma, I got into university! I really miss your couscous.", "meaning_en": "Grandma, I got into university! I really miss your couscous.", "feeling": ["pride", "longing"]}
+  ]
+}

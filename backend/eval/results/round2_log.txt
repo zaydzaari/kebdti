@@ -1,0 +1,6 @@
+done: openai/gpt-6-luna
+done: deepseek/deepseek-v4.1-flash
+done: google/gemini-3.8-flash
+done: gemini-3.6-flash
+report: C:\Users\me\Desktop\hackaton\eval\results\round2_report.md
+total zenmux cost: $0.1965

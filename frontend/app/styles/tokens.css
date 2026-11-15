@@ -1,0 +1,115 @@
+/* Kebdti design system — tokens.
+   Direction: "Majorelle". Clean near-white paper, black ink, one vivid Majorelle blue for the voice,
+   saffron for meaning. Flat fills, few shadows, heavy type, one bold thing per screen.
+   (Variable names are historical: --k-terra is the voice colour, --k-olive the meaning colour.) */
+
+:root {
+  --k-paper: #fbfaf7;
+  --k-paper-2: #f1efe9;
+  --k-card: #f2f0ea;
+  --k-card-2: #e8e5dd;
+  --k-raised: #ffffff;
+  --k-ink: #0f0e17;
+  --k-ink-2: #4a4858;
+  --k-ink-3: #7c798b;
+  --k-hair: rgba(15, 14, 23, 0.08);
+  --k-hair-2: rgba(15, 14, 23, 0.14);
+
+  /* the voice: Majorelle blue */
+  --k-terra: #4a3aff;
+  --k-terra-hi: #8f86ff;
+  --k-terra-lo: #2a1fb8;
+  --k-terra-ink: #3a2be0;
+  --k-terra-soft: #e9e7ff;
+  --k-glow: rgba(74, 58, 255, 0.45);
+
+  /* the meaning: saffron */
+  --k-olive: #ffc61a;
+  --k-olive-ink: #6b4e00;
+  --k-olive-soft: #fff3c4;
+
+  --k-btn: #0f0e17;
+  --k-btn-hover: #2a2838;
+  --k-on-btn: #ffffff;
+  --k-danger: #e0303a;
+  --k-danger-soft: #ffe4e4;
+
+  --k-shadow-1: 0 0 0 transparent;
+  --k-shadow-2: 0 14px 34px -18px rgba(15, 14, 23, 0.28);
+  --k-shadow-3: 0 26px 60px -26px rgba(15, 14, 23, 0.45);
+  --k-ring: 0 0 0 3px color-mix(in srgb, var(--k-terra) 35%, transparent);
+
+  --k-wash-1: transparent;
+  --k-wash-2: transparent;
+
+  --k-r-xs: 12px; --k-r-sm: 16px; --k-r-md: 22px; --k-r-lg: 28px; --k-r-xl: 34px; --k-r-pill: 999px;
+
+  --k-s1: 4px; --k-s2: 8px; --k-s3: 12px; --k-s4: 16px; --k-s5: 20px; --k-s6: 24px; --k-s8: 32px; --k-s10: 40px; --k-s12: 48px; --k-s16: 64px;
+  --k-gutter: 20px;
+
+  --k-ui: "Readex Pro Variable", "Readex Pro", "Segoe UI", system-ui, -apple-system, "Noto Sans Arabic", sans-serif;
+  --k-display: "Bricolage Grotesque Variable", "Readex Pro Variable", system-ui, sans-serif;
+  --k-t12: 12px; --k-t13: 13px; --k-t14: 14px; --k-t15: 15px; --k-t16: 16px; --k-t18: 18px; --k-t20: 20px; --k-t24: 24px; --k-t28: 30px; --k-t34: 40px; --k-t44: 56px;
+
+  --k-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --k-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --k-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --k-fast: 140ms; --k-base: 240ms; --k-slow: 420ms; --k-enter: 560ms;
+
+  --k-dock-h: 68px;
+  --k-dock: #0f0e17;
+  --k-dock-ink: #8d8a9c;
+  --k-dock-on: #ffc61a;
+  --k-dock-on-ink: #0f0e17;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --k-paper: #0d0c14; --k-paper-2: #08070d; --k-card: #191823; --k-card-2: #23212f; --k-raised: #2c2a3a;
+    --k-ink: #f5f4fa; --k-ink-2: #bdbacb; --k-ink-3: #85829a; --k-hair: rgba(245, 244, 250, 0.07); --k-hair-2: rgba(245, 244, 250, 0.13);
+    --k-terra: #7466ff; --k-terra-hi: #b3abff; --k-terra-lo: #3a2ed1; --k-terra-ink: #a99fff; --k-terra-soft: #211d4a; --k-glow: rgba(116, 102, 255, 0.5);
+    --k-olive: #ffd043; --k-olive-ink: #ffd96b; --k-olive-soft: #2e2611;
+    --k-btn: #f5f4fa; --k-btn-hover: #ffffff; --k-on-btn: #0d0c14; --k-danger: #ff6b6b; --k-danger-soft: #3a1518;
+    --k-shadow-2: 0 18px 40px -20px rgba(0, 0, 0, 0.85); --k-shadow-3: 0 30px 70px -28px rgba(0, 0, 0, 0.9);
+    --k-dock: #1c1a28; --k-dock-ink: #8d8a9c; --k-dock-on: #ffd043; --k-dock-on-ink: #0d0c14;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --k-paper: #0d0c14; --k-paper-2: #08070d; --k-card: #191823; --k-card-2: #23212f; --k-raised: #2c2a3a;
+  --k-ink: #f5f4fa; --k-ink-2: #bdbacb; --k-ink-3: #85829a; --k-hair: rgba(245, 244, 250, 0.07); --k-hair-2: rgba(245, 244, 250, 0.13);
+  --k-terra: #7466ff; --k-terra-hi: #b3abff; --k-terra-lo: #3a2ed1; --k-terra-ink: #a99fff; --k-terra-soft: #211d4a; --k-glow: rgba(116, 102, 255, 0.5);
+  --k-olive: #ffd043; --k-olive-ink: #ffd96b; --k-olive-soft: #2e2611;
+  --k-btn: #f5f4fa; --k-btn-hover: #ffffff; --k-on-btn: #0d0c14; --k-danger: #ff6b6b; --k-danger-soft: #3a1518;
+  --k-shadow-2: 0 18px 40px -20px rgba(0, 0, 0, 0.85); --k-shadow-3: 0 30px 70px -28px rgba(0, 0, 0, 0.9);
+  --k-dock: #1c1a28; --k-dock-ink: #8d8a9c; --k-dock-on: #ffd043; --k-dock-on-ink: #0d0c14;
+  color-scheme: dark;
+}
+
+/* ---------- motion vocabulary ---------- */
+@keyframes k-enter { from { opacity: 0; transform: translateY(16px) scale(0.985); } to { opacity: 1; transform: none; } }
+@keyframes k-exit { to { opacity: 0; transform: translateY(-8px) scale(0.99); } }
+@keyframes k-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes k-pop { 0% { opacity: 0; transform: scale(0.86); } 60% { opacity: 1; transform: scale(1.04); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes k-reveal { from { opacity: 0; transform: translateY(0.45em); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes k-flip-in { from { opacity: 0; transform: perspective(700px) rotateX(-60deg) translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes k-ripple { from { transform: translate(-50%, -50%) scale(0); opacity: 0.28; } to { transform: translate(-50%, -50%) scale(1); opacity: 0; } }
+@keyframes k-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+@keyframes k-blob { 0%, 100% { border-radius: 50%; } 25% { border-radius: 58% 42% 55% 45% / 46% 56% 44% 54%; } 50% { border-radius: 44% 56% 42% 58% / 56% 44% 58% 42%; } 75% { border-radius: 54% 46% 60% 40% / 42% 58% 46% 54%; } }
+@keyframes k-spin { to { transform: rotate(360deg); } }
+@keyframes k-drift { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(3%, -4%, 0) scale(1.08); } }
+@keyframes k-bar { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+@keyframes k-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@keyframes k-ring-out { from { transform: scale(0.95); opacity: 0.5; } to { transform: scale(1.75); opacity: 0; } }
+@keyframes k-beat { 0%, 100% { transform: scale(1); } 7% { transform: scale(1.12); } 14% { transform: scale(1); } 21% { transform: scale(1.07); } 30% { transform: scale(1); } }
+@keyframes k-heart-float { 0% { opacity: 0; transform: translate(0, 0) scale(0.4); } 18% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--dx, 0), -96px) scale(1) rotate(var(--rot, 0deg)); } }
+@keyframes k-shine { 0%, 60% { transform: translateX(-140%) skewX(-18deg); } 100% { transform: translateX(420%) skewX(-18deg); } }
+@keyframes k-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes k-stroke { from { stroke-dashoffset: var(--len, 40); } to { stroke-dashoffset: 0; } }
+@keyframes k-shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(3px); } }
+@keyframes k-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-10deg); } 75% { transform: rotate(10deg); } }
+@keyframes k-dot { 0%, 80%, 100% { transform: translateY(0); opacity: 0.35; } 40% { transform: translateY(-4px); opacity: 1; } }
+@keyframes k-sweep { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes k-pulse-border { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--k-terra) 45%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }

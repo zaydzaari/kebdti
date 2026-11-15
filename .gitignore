@@ -1,0 +1,21 @@
+# secrets
+.env
+.env.*
+!.env.example
+!.env.local.example
+# private data: voice notes, cloned-voice references, conversations
+backend/data/
+*.mp3
+*.wav
+*.ogg
+*.opus
+*.m4a
+*.webm
+# build output
+node_modules/
+.next/
+.test-output/
+__pycache__/
+*.pyc
+e2e-shots/
+!frontend/scripts/test-audio/*.wav

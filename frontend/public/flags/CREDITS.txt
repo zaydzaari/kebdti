@@ -1,0 +1,2 @@
+Round flag icons from circle-flags by HatScripts (https://github.com/HatScripts/circle-flags), v2.7.0, MIT License.
+ar.svg is the set's Arabic-language flag, used for Modern Standard Arabic.

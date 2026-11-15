@@ -1,0 +1,290 @@
+[
+ {
+  "darija": "أ كبدتي",
+  "latin": "a kebdti",
+  "cat": "love",
+  "literal": {
+   "en": "my liver",
+   "fr": "mon foie",
+   "es": "mi hígado",
+   "it": "mio fegato"
+  },
+  "means": {
+   "en": "my darling, my heart",
+   "fr": "mon cœur",
+   "es": "cariño, mi vida",
+   "it": "amore mio"
+  },
+  "why": "In Darija, deep love lives in the liver, not the heart. It's the tenderest word a grandmother has."
+ },
+ {
+  "darija": "أ عينيا",
+  "latin": "a 3iniya",
+  "cat": "love",
+  "literal": {
+   "en": "my eyes",
+   "fr": "mes yeux",
+   "es": "mis ojos",
+   "it": "occhi miei"
+  },
+  "means": {
+   "en": "my dear, apple of my eye",
+   "fr": "la prunelle de mes yeux",
+   "es": "mi cielo",
+   "it": "tesoro mio"
+  },
+  "why": "You are as precious to me as my own eyes."
+ },
+ {
+  "darija": "ضو عينيا",
+  "latin": "daw 3iniya",
+  "cat": "love",
+  "literal": {
+   "en": "the light of my eyes",
+   "fr": "la lumière de mes yeux",
+   "es": "la luz de mis ojos",
+   "it": "la luce dei miei occhi"
+  },
+  "means": {
+   "en": "you mean everything to me",
+   "fr": "tu es tout pour moi",
+   "es": "eres todo para mí",
+   "it": "sei tutto per me"
+  },
+  "why": "Without you, I can't see: you are what makes my world bright."
+ },
+ {
+  "darija": "الله يخليك ليا",
+  "latin": "lah ykhlik liya",
+  "cat": "love",
+  "literal": {
+   "en": "may God keep you for me",
+   "fr": "que Dieu te garde pour moi",
+   "es": "que Dios te guarde para mí",
+   "it": "che Dio ti tenga per me"
+  },
+  "means": {
+   "en": "I love you so much",
+   "fr": "je t'aime tellement",
+   "es": "te quiero muchísimo",
+   "it": "ti voglio tanto bene"
+  },
+  "why": "A prayer that you stay in my life: the way elders say 'I love you'."
+ },
+ {
+  "darija": "الله يرضي عليك",
+  "latin": "lah yrdi 3lik",
+  "cat": "blessings",
+  "literal": {
+   "en": "may God be satisfied with you",
+   "fr": "que Dieu soit satisfait de toi",
+   "es": "que Dios esté satisfecho contigo",
+   "it": "che Dio sia soddisfatto di te"
+  },
+  "means": {
+   "en": "God bless you, I'm proud of you",
+   "fr": "que Dieu te bénisse, je suis fière de toi",
+   "es": "Dios te bendiga, estoy orgullosa de ti",
+   "it": "Dio ti benedica, sono fiera di te"
+  },
+  "why": "A parent's blessing: the most precious thing a Moroccan child can receive."
+ },
+ {
+  "darija": "تبارك الله عليك",
+  "latin": "tbarkallah 3lik",
+  "cat": "blessings",
+  "literal": {
+   "en": "God's blessing is upon you",
+   "fr": "la bénédiction de Dieu est sur toi",
+   "es": "la bendición de Dios está sobre ti",
+   "it": "la benedizione di Dio è su di te"
+  },
+  "means": {
+   "en": "look at you, well done!",
+   "fr": "regarde-toi, bravo !",
+   "es": "¡mírate, muy bien!",
+   "it": "guardati, bravo!"
+  },
+  "why": "Admiration that also protects you from the evil eye."
+ },
+ {
+  "darija": "الله يرحم والديك",
+  "latin": "lah yr7em walidik",
+  "cat": "blessings",
+  "literal": {
+   "en": "may God have mercy on your parents",
+   "fr": "que Dieu fasse miséricorde à tes parents",
+   "es": "que Dios tenga piedad de tus padres",
+   "it": "che Dio abbia pietà dei tuoi genitori"
+  },
+  "means": {
+   "en": "thank you so much",
+   "fr": "merci infiniment",
+   "es": "muchísimas gracias",
+   "it": "grazie mille"
+  },
+  "why": "The warmest 'thank you'. It does NOT mean your parents have died."
+ },
+ {
+  "darija": "الله يسهل عليك",
+  "latin": "lah ysehhel 3lik",
+  "cat": "blessings",
+  "literal": {
+   "en": "may God make it easy for you",
+   "fr": "que Dieu te rende les choses faciles",
+   "es": "que Dios te lo haga fácil",
+   "it": "che Dio te la renda facile"
+  },
+  "means": {
+   "en": "good luck",
+   "fr": "bonne chance",
+   "es": "buena suerte",
+   "it": "in bocca al lupo"
+  },
+  "why": "Said before an exam, a trip, a new job."
+ },
+ {
+  "darija": "توحشتك بزاف",
+  "latin": "twe7chtek bzaf",
+  "cat": "missing",
+  "literal": {
+   "en": "I felt lonely for you a lot",
+   "fr": "je me suis sentie seule de toi",
+   "es": "me sentí sola de ti",
+   "it": "mi sono sentita sola di te"
+  },
+  "means": {
+   "en": "I miss you so much",
+   "fr": "tu me manques tellement",
+   "es": "te echo mucho de menos",
+   "it": "mi manchi tanto"
+  },
+  "why": "It comes from the word for loneliness: without you, I feel alone."
+ },
+ {
+  "darija": "بلا بيك العيد ما عندو بنة",
+  "latin": "bla bik l3id ma 3ndo benna",
+  "cat": "missing",
+  "literal": {
+   "en": "without you Eid has no taste",
+   "fr": "sans toi l'Aïd n'a pas de goût",
+   "es": "sin ti el Eid no tiene sabor",
+   "it": "senza di te l'Eid non ha sapore"
+  },
+  "means": {
+   "en": "Eid isn't the same without you",
+   "fr": "l'Aïd n'est pas pareil sans toi",
+   "es": "el Eid no es lo mismo sin ti",
+   "it": "l'Eid non è lo stesso senza di te"
+  },
+  "why": "Celebrations only feel complete when the whole family is home."
+ },
+ {
+  "darija": "كبدي عليك",
+  "latin": "kebdi 3lik",
+  "cat": "missing",
+  "literal": {
+   "en": "my liver is on you",
+   "fr": "mon foie est sur toi",
+   "es": "mi hígado está sobre ti",
+   "it": "il mio fegato è su di te"
+  },
+  "means": {
+   "en": "my heart aches for you",
+   "fr": "j'ai mal au cœur pour toi",
+   "es": "me duele el alma por ti",
+   "it": "mi si stringe il cuore per te"
+  },
+  "why": "Worry and tenderness together, for someone far away."
+ },
+ {
+  "darija": "بالشفا",
+  "latin": "bchfa",
+  "cat": "everyday",
+  "literal": {
+   "en": "with the cure",
+   "fr": "avec la guérison",
+   "es": "con la cura",
+   "it": "con la cura"
+  },
+  "means": {
+   "en": "get well soon",
+   "fr": "bon rétablissement",
+   "es": "que te mejores",
+   "it": "guarisci presto"
+  },
+  "why": "Said to anyone who is sick, or after a haircut or a bath (fresh start)."
+ },
+ {
+  "darija": "بصحتك",
+  "latin": "bse77tek",
+  "cat": "everyday",
+  "literal": {
+   "en": "with your health",
+   "fr": "avec ta santé",
+   "es": "con tu salud",
+   "it": "con la tua salute"
+  },
+  "means": {
+   "en": "enjoy it!",
+   "fr": "profites-en !",
+   "es": "¡que lo disfrutes!",
+   "it": "goditelo!"
+  },
+  "why": "For new clothes, a new phone, a good meal: may it bring you joy."
+ },
+ {
+  "darija": "الله يهديك",
+  "latin": "lah yhdik",
+  "cat": "everyday",
+  "literal": {
+   "en": "may God guide you",
+   "fr": "que Dieu te guide",
+   "es": "que Dios te guíe",
+   "it": "che Dio ti guidi"
+  },
+  "means": {
+   "en": "oh, come on!",
+   "fr": "allez, voyons !",
+   "es": "¡anda ya!",
+   "it": "dai, su!"
+  },
+  "why": "A gentle, loving telling-off, usually with a smile."
+ },
+ {
+  "darija": "اللي فات مات",
+  "latin": "lli fat mat",
+  "cat": "proverbs",
+  "literal": {
+   "en": "what passed has died",
+   "fr": "ce qui est passé est mort",
+   "es": "lo pasado murió",
+   "it": "ciò che è passato è morto"
+  },
+  "means": {
+   "en": "let bygones be bygones",
+   "fr": "le passé est le passé",
+   "es": "lo pasado, pasado está",
+   "it": "acqua passata"
+  },
+  "why": "Forgive and move on."
+ },
+ {
+  "darija": "قطران بلادي ولا عسل البلدان",
+  "latin": "9tran bladi wla 3sel lbouldan",
+  "cat": "proverbs",
+  "literal": {
+   "en": "the tar of my country over the honey of other lands",
+   "fr": "le goudron de mon pays plutôt que le miel des autres",
+   "es": "el alquitrán de mi tierra antes que la miel de otras",
+   "it": "il catrame del mio paese piuttosto che il miele degli altri"
+  },
+  "means": {
+   "en": "there's no place like home",
+   "fr": "rien ne vaut son chez-soi",
+   "es": "como en casa, en ningún sitio",
+   "it": "casa dolce casa"
+  },
+  "why": "Home is home, even at its hardest."
+ }
+]
