@@ -157,7 +157,7 @@ The Darija voice (her clone speaking Darija) was harder: 62% of words heard back
 
 **Code:**
 - [Next.js](https://nextjs.org), [React](https://react.dev) and [Framer Motion](https://www.framer.com/motion/)
-- [FastAPI](https://fastapi.tiangolo.com) and [Uvicorn](https://www.uvicorn.org)
+- [FastAPI](https://fastapi.tiangolo.com) and [Uvicorn](https://github.com/encode/uvicorn)
 - [FFmpeg](https://ffmpeg.org)
 - [Playwright](https://playwright.dev): end-to-end tests
 - [circle-flags](https://github.com/HatScripts/circle-flags) (MIT)
